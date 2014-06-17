@@ -1,5 +1,6 @@
 package com.example.dialogfragment;
-import Task.RecuperarDatos;
+import EnvioPost.EnvioPost;
+import Task.LoginTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -39,13 +40,12 @@ public class MainActivity extends FragmentActivity implements OnClickListener,Co
 	public void Comunicacion(String usuario,String password) {
 	      	Log.d("Hola", usuario+"  "+ password);
 	        //Envia un JSon
-	      //	new LoginTask(MainActivity.this,usuario,password).execute();  	
+	       //new LoginTask(MainActivity.this,usuario,password).execute();  	
 	        
 	      	//Envia mediante Post
-	  //    new EnvioPost(MainActivity.this, usuario, password).execute();
+	       new EnvioPost(MainActivity.this, usuario, password).execute();
 	  
-	      	new RecuperarDatos().execute("http://demo.mysamplecode.com/Servlets_JSP/CountryJSONData");      	
-	
+	      		
 	}
 
     
