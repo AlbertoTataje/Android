@@ -1,7 +1,4 @@
 package com.example.dialogfragment;
-
-import EnvioPost.EnvioPost;
-import Task.LoginTask;
 import Task.RecuperarDatos;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -47,7 +44,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener,Co
 	      	//Envia mediante Post
 	  //    new EnvioPost(MainActivity.this, usuario, password).execute();
 	  
-	      	new RecuperarDatos(MainActivity.this).execute();      	
+	      	new RecuperarDatos().execute("http://demo.mysamplecode.com/Servlets_JSP/CountryJSONData");      	
 	
 	}
 
