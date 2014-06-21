@@ -1,0 +1,31 @@
+
+String[] cadena=getResources().getStringArray(R.array.datos);
+	    
+	
+	ArrayAdapter<String> adapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,cadena);
+	
+	
+	
+	  String[] cadena=getResources().getStringArray(R.array.datos);
+	    ArrayAdapter<String> adapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,cadena);
+	    setListAdapter(adapter);
+	    
+	    
+	    
+	    //doble
+	    
+	    ArrayList<HashMap<String,String>> data= new ArrayList<HashMap<String,String>>();
+	    
+	    for (int i = 0; i < 10; i++) {
+			HashMap<String,String> map=new HashMap<String,String>();
+			map.put("nombre","Luis"+i);
+			map.put("Apellido","Juarez"+i);
+		    data.add(map);
+		}		
+	    
+	    int layout = android.R.layout.simple_list_item_2;
+	    String[] from = new String[]{"nombre","Apellido"};
+	    int[] to = new int[]{android.R.id.text1,android.R.id.text2};
+	    
+	    SimpleAdapter adapter=new SimpleAdapter(this,data,layout,from,to);
+	    setListAdapter(adapter);    
